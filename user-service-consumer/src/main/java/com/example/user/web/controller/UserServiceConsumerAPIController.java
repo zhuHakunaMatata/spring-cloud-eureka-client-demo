@@ -16,7 +16,6 @@ public class UserServiceConsumerAPIController {
     @Autowired
     private UserService userService;
 
-
     @PostMapping("/user/save")
     public User saveUser(@RequestParam String userName){
         User user = new User();
@@ -29,6 +28,5 @@ public class UserServiceConsumerAPIController {
     public Collection<User> listAll(){
         return userService.findAll();
     }
-
 
 }

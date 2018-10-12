@@ -20,7 +20,6 @@ public class UserRepository {
     //
     private static final AtomicLong idGenerator = new AtomicLong(0);
 
-
     public boolean save(User user) {
         Long id = idGenerator.getAndIncrement();
         user.setId(id);
@@ -28,11 +27,9 @@ public class UserRepository {
         return u != null;
     }
 
-
     public Collection<User> findAll() {
         Collection<User> users = repository.values();
         return users;
     }
-
 
 }
